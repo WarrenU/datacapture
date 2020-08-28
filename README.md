@@ -1,4 +1,4 @@
-# Steps to Run:
+## Steps to Run:
 I used python 3.8.2 to run my project. This code should work with python 2 as well.
 
  - #1 Clone the project:
