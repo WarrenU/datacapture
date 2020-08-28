@@ -14,6 +14,8 @@ Change to the directory of the project:
 - #4
 Activate the virtual environment
 `. /venv/bin/activate`
+Note: when done with looking at the project, remember to deactive your virtual environment:
+`deactive`
 
  - #5 In your terminal (in your datacapture directory), run: 
 `python main.py`
