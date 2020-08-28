@@ -15,7 +15,7 @@ Change to the directory of the project:
 Activate the virtual environment
 `. /venv/bin/activate`
 
- - #5 **Run** From the main project directory, where main.py is accessible run the project by calling
+ - #5 In your terminal (in your datacapture directory), run: 
 `python main.py`
 
  - #6 Edit `main.py` If you want to try out other data points, or add to the `src/tests.py` file to add more testing criteria. (I have one test case for a dataset of numbers, 1 to 1000.
@@ -23,3 +23,5 @@ Activate the virtual environment
 ## Run Tests
 To run the testing suite, call:
 `python3 -m unittest src/tests.py`
+or alternatively:
+`python3 -m unittest src.tests`
