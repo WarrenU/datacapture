@@ -1,5 +1,5 @@
 ## Steps to Run:
-I used python 3.8.2 to run my project. This code should work with python 2 as well.
+I used python 3.8.2 to run my project. I used type hinting within my project so it will only work with python 3 atleast.
 
  - #1 Clone the project:
 `git clone https://github.com/WarrenU/datacapture.git`
