@@ -1,4 +1,4 @@
-from src.exceptions import StatsNotBuiltError
+from src.exceptions import NoStatsException
 
 
 class Stat():
@@ -15,8 +15,7 @@ class Stat():
 
     def between(self, lower: int, upper: int) -> int:
         """
-        between returns a count of numbers that occur within the stats
-        datastructure (list of Node). This range is inclusive.
+        between returns a count of numbers within an inclusive range
         """
         self.validate_stats_built()
         lo = self.stats[lower]
@@ -25,9 +24,9 @@ class Stat():
 
     def validate_stats_built(self):
         """
-        validate_stats_built will raise a StatsNotBuiltError if a user
+        validate_stats_built will raise a NoStatsException if a user
         tries to call `less`, `greater` or `between` before calling
         build_stats()
         """
-        if self.stats is None:
-            raise StatsNotBuiltError
+        if self.stats is None or len(self.stats) == 0:
+            raise NoStatsException

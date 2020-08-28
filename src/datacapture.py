@@ -1,3 +1,5 @@
+from src.exceptions import NoStatsException
+
 from src.node import Node
 from src.stat import Stat
 
@@ -32,6 +34,8 @@ class DataCapture():
             stats[3] will hold 1 node to keep track ofvalues for the number 3
             stats[0], stats[2] will be None
         """
+        if self.max_int == 0:
+            raise NoStatsException
         stats = [None] * (self.max_int + 1)
         total_data = len(self.data)
 

@@ -1,6 +1,7 @@
 import unittest
 
 from src.datacapture import DataCapture
+from src.exceptions import NoStatsException
 
 
 class TestDataCapture(unittest.TestCase):
@@ -72,6 +73,10 @@ class TestDataCapture(unittest.TestCase):
 
         # 1004 Elements - elements: [1,2,3,4,5] 1004-5 = 999
         self.assertEqual(stats.greater(5), 999)
+
+    def test_stats_built_exception(self):
+        capture = DataCapture()
+        self.assertRaises(NoStatsException, capture.build_stats)
 
 
 if __name__ == "__main__":
