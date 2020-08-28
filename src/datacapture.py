@@ -29,9 +29,9 @@ class DataCapture():
         attribute called `stats` which is an array of None and Node values.
         Each index of the `stats` array is a bucket of at most 1 Node.
         For example:
-            If I add in 1 and 3 into my DataCapture object,
-            stats[1] will hold 1 node keep track of data for the number 1 
-            stats[3] will hold 1 node to keep track ofvalues for the number 3
+            If I add in 1 and 3 into my DataCapture object...
+            stats[1] will hold 1 `Node` keeping track of data for the #1
+            stats[3] will hold 1 `Node` keeping track of data for the #3
             stats[0], stats[2] will be None
         """
         if self.max_int == 0:
@@ -39,6 +39,8 @@ class DataCapture():
         stats = [None] * (self.max_int + 1)
         total_data = len(self.data)
 
+        # Create Node Objects per bucket in stats array.
+        # Increment occurences if a number appears more than once:
         for value in self.data:
             curr = stats[value]
             if curr is None:
@@ -46,6 +48,8 @@ class DataCapture():
             else:
                 curr.occurence += 1
 
+        # Iterate over Node Objects, and determine how many numbers
+        # occur after and before the given number.
         count = 0
         for v in stats:
             if v is not None:

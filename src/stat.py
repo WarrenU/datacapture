@@ -2,6 +2,13 @@ from src.exceptions import NoStatsException
 
 
 class Stat():
+    """
+    Stat is an object that holds an array `stats` and allows for
+    providing insights into the statistics through use of funcs:
+    `less`, `greater`, and `between`.
+    `stats` holds Node and None type values.
+    """
+
     def __init__(self, stats):
         self.stats = stats
 
