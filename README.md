@@ -18,7 +18,7 @@ Note: when done with looking at the project, remember to deactive your virtual e
 `deactive`
 
  - #5 In your terminal (in your datacapture directory), run: 
-`python main.py`
+`python main.py` or `python3 main.py`
 
  - #6 Edit `main.py` If you want to try out other data points, or add to the `src/tests.py` file to add more testing criteria. (I have one test case for a dataset of numbers, 1 to 1000.
 
